@@ -8,3 +8,5 @@ public class BankingApplication {
         System.out.println("Hello World");
     }
 }
+
+/* Add in withdrawing, depositing, and checking balance options. Will add in GUI. */
