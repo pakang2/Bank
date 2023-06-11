@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class BankingApplication {
     public static void main(String[] args) {
 
-        System.out.println("Hello World");
+        account paulk = new account("Paul", "Kang", 1, 0);
+        System.out.println("Paul's balance: " + paulk.checkBalance());
     }
 }
 
