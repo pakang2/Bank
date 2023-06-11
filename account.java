@@ -15,11 +15,11 @@ public class account {
         this.balance = balance;
     }
 
-    public int deposit(int amount){
-        return 0;
+    public void deposit(int amount){
+        balance += amount;
     }
-    public int withdraw(int amount){
-        return 0;
+    public void withdraw(int amount){
+        balance -= amount;
     }
     public int checkBalance(){
         return balance;
