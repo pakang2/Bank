@@ -1,4 +1,6 @@
 public class account {
+    String userName;
+    String password;
     String firstName;
     String lastName;
     int id;
