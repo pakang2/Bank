@@ -4,11 +4,19 @@ import java.util.Scanner;
 
 public class BankingApplication {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int id = 0;
 
         //GUI testGui = new GUI();
 
-        account paulk = new account("Paul", "Kang", 1, 0);
-        System.out.println("Paul's balance: " + paulk.checkBalance());
+        //Obtain information from user
+        System.out.println("Please enter your first name: ");
+        String firstName = sc.nextLine();
+        System.out.println("Please enter your last name: ");
+        String lastName = sc.nextLine();
+
+        account paulk = new account(firstName, lastName, id, 0);
+        System.out.println(firstName + " " + lastName + "'s account balance: " + paulk.checkBalance());
     }
 }
 
