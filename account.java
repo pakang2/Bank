@@ -1,6 +1,4 @@
 public class account {
-    String userName;
-    String password;
     String firstName;
     String lastName;
     int id;
@@ -25,5 +23,8 @@ public class account {
     }
     public int checkBalance() {
         return balance;
+    }
+    public void adjustBalance(String userInput){
+        System.out.println("Test");
     }
 }
