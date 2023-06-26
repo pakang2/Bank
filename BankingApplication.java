@@ -21,8 +21,10 @@ public class BankingApplication {
         System.out.println("Would you like to adjust your balance? (Y/N)");
         String userInput = sc.next();
         userInput = userInput.toUpperCase();
-        user.adjustBalance(userInput);
 
+        while (userInput.equals("Y")) {
+            user.adjustBalance(userInput);
+        }
 
         System.out.println(firstName + " " + lastName + "'s account balance: " + user.checkBalance());
 
