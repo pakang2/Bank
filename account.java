@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class account {
     String firstName;
     String lastName;
@@ -25,6 +27,9 @@ public class account {
         return balance;
     }
     public void adjustBalance(String userInput){
-        System.out.println("Test");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Would you like ot adjust your balance? (Y/N)");
+
+        sc.close();
     }
 }
