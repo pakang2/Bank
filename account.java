@@ -26,10 +26,28 @@ public class account {
     public int checkBalance() {
         return balance;
     }
-    public void adjustBalance(String userInput){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Would you like ot adjust your balance? (Y/N)");
+    public void adjustBalance(){
+        Scanner scAccount = new Scanner(System.in);
+        String answer = "";
 
-        sc.close();
+        while (!answer.equals("E")) {
+            System.out.println("Would you like to withdraw, deposit, or exit? (W/D/E)");
+            answer = scAccount.next();
+
+            switch (answer) {
+                case "W":
+                    //Withdraw
+                    break;
+                case "D":
+                    //Deposit
+                    break;
+                case "E":
+                    System.out.println("Goodbye");
+                    break;
+                default:
+                    System.out.println("Invalid input. Please try again.");
+            }
+        }
+
     }
 }

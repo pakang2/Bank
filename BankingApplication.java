@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class BankingApplication {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Scanner sc2 = new Scanner(System.in);
         int id = 0;
 
         //GUI testGui = new GUI();
@@ -19,17 +18,17 @@ public class BankingApplication {
         account user = new account(firstName, lastName, id, 0);
 
         System.out.println("Would you like to adjust your balance? (Y/N)");
-        String userInput = sc.next();
-        userInput = userInput.toUpperCase();
+        String userInput = sc.next().toUpperCase();
 
         while (userInput.equals("Y")) {
-            user.adjustBalance(userInput);
+            user.adjustBalance();
+            System.out.println("Would you like to adjust your balance? (Y/N)");
+            userInput = sc.next().toUpperCase();
         }
 
         System.out.println(firstName + " " + lastName + "'s account balance: " + user.checkBalance());
 
         sc.close();
-        sc2.close();
     }
 }
 
